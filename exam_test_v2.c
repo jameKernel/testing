@@ -15,7 +15,7 @@ int main(){
     total_marks = math + science + program + jp;
     avg = (total_marks)/4.0;
     printf("%d %d %d %d\n", math, science, program, jp);
-    loop:
+    loop: // run again these instructions
     if(count == 1){
         marks = math;
         printf("%d", marks);
@@ -50,7 +50,7 @@ int main(){
         else if (marks > 60 && marks <= 80) G_jp = 'B';
         else if (marks > 80 && marks <= 100) G_jp = 'A';
     }
-    else goto endloop;
+    else goto endloop; // if count is next 4 repeat instructions will be exit.
     count++;
     goto loop;
     endloop:
@@ -59,4 +59,8 @@ int main(){
         printf("\t\tReported Card!!!\n");
         printf("%c\t%c\t%c\t%c\t\t%.2f\t%.2f", G_math, G_sci, G_prog, G_jp, avg, total_marks);
     }
+    esle{
+        printf("This student fail the exam.\n");
+        printf("\t\tReported Card!!!\n");
+        printf("%c\t%c\t%c\t%c\t\t%.2f\t%.2f", G_math, G_sci, G_prog, G_jp, avg, total_marks);
 }
